@@ -1,0 +1,37 @@
+upstream fastcgi_backend {
+    # socket
+    # server unix:/var/run/php5-fpm.sock;
+   server   unix:/run/php/php7.0-fpm.sock;
+    # use tcp connection
+    #  server  127.0.0.1:9000;
+
+}
+
+server {
+    #listen 80 ;
+    server_name beta.medicinedirect.co.uk;
+
+    set $MAGE_ROOT /var/www/html/magento/onlinepharmacy;
+
+   set $MAGE_MODE developer;
+#    set $MAGE_MODE default;
+#    set $MAGE_MODE production;
+
+    include /var/www/html/magento/onlinepharmacy/nginx.conf.sample;
+    fastcgi_read_timeout 3000;
+}
+
+server {
+    #listen 80 ;
+    server_name local.gardssallskapet.se;
+
+    set $MAGE_ROOT /var/www/html/magento/gardssallskapet;
+
+   set $MAGE_MODE developer;
+#    set $MAGE_MODE default;
+#    set $MAGE_MODE production;
+
+    include /var/www/html/magento/gardssallskapet/nginx.conf.sample;
+    fastcgi_read_timeout 3000;
+}
+
