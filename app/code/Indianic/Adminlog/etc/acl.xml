@@ -4,7 +4,7 @@
         <resources>
             <resource id="Magento_Adminhtml::admin">
                 <resource id="Indianic_Adminlog::adminlog" title="adminlog" sortOrder="100"/>
- <!--AddMenuAcl-->
+ 
             </resource>
         </resources>
     </acl>
