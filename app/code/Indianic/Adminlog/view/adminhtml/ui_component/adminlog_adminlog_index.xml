@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <!-- ... other block of code -->
+    <container name="listing_top">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="template" xsi:type="string">ui/grid/toolbar</item>
+                <item name="stickyTmpl" xsi:type="string">ui/grid/sticky/toolbar</item>
+            </item>
+        </argument>
+    </container>
+        
+         <container name="listing_top">
+        <bookmark name="bookmarks">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="storageConfig" xsi:type="array">
+                        <item name="namespace" xsi:type="string">adminlog_adminlog_index</item>
+                    </item>
+                </item>
+            </argument>
+        </bookmark>
+        </container>
+    <component name="columns_controls">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="columnsData" xsi:type="array">
+                    <item name="provider" xsi:type="string">adminlog_adminlog_index.adminlog_adminlog_index.adminlog_adminlog_index</item>
+                </item>
+                <item name="component" xsi:type="string">Magento_Ui/js/grid/controls/columns</item>
+                <item name="displayArea" xsi:type="string">dataGridActions</item>
+            </item>
+        </argument>
+    </component>
+
+     <filterSearch name="fulltext">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="provider" xsi:type="string">adminlog_adminlog_index.adminlog_adminlog_index</item>
+                    <item name="chipsProvider" xsi:type="string">adminlog_adminlog_index.adminlog_adminlog_index.adminlog_adminlog_index.adminlog_adminlog_index</item>
+                    <item name="storageConfig" xsi:type="array">
+                        <item name="provider" xsi:type="string">adminlog_adminlog_index.adminlog_adminlog_index.adminlog_adminlog_index.bookmarks</item>
+                        <item name="namespace" xsi:type="string">current.search</item>
+                    </item>
+                </item>
+            </argument>
+        </filterSearch>
+
+</listing>

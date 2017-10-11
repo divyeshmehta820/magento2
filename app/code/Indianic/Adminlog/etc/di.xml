@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Created by wilson.sun330@gmail.com
+ * Date: 11/09/2015
+* Time: 5:02 PM
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+<preference for="Magento\Backend\Controller\Adminhtml\Auth\Logout" type="Indianic\Adminlog\Controller\Adminhtml\Auth\Logout" /> 
+<preference for="Magento\Checkout\Controller\Cart\UpdatePost" type="Indianic\Adminlog\Controller\Cart\UpdatePost" />
+<preference for="Magento\Checkout\Model\Cart" type="Indianic\Adminlog\Model\Cart" />
+
+
+<type name="Magento\Quote\Model\Quote\Item\ToOrderItem">
+	<plugin name="HelloWorld_to_order_item" type="Indianic\Adminlog\Model\Plugin\Quote\IndianicToOrderItem"/>
+</type>
+<type name="Magento\User\Block\User\Edit\Tab\Main">
+     <plugin name="sr_stackexchange_user_form" type="Indianic\Adminlog\Block\Adminhtml\User\Edit\Tab\Main"  sortOrder="1"/>
+ </type>
+
+
+</config>

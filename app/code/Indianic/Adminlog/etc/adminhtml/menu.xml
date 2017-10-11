@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Indianic. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="Indianic_Adminlog::indianic_adminlog_index" title="Adminlog" module="Indianic_Adminlog"  sortOrder="20" dependsOnModule="Indianic_Adminlog" action="adminlog/adminlog/index" resource="Indianic_Adminlog::indianic_adminlog_index"/>
+<!--AddMenu-->
+    </menu>
+</config>

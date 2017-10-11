@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add id="Indianic_Helloworld::helloworld" title="Admin Log" module="Indianic_Helloworld" sortOrder="51" resource="Indianic_HelloWorld::helloworld"/>
+
+	   <add id="Indianic_Helloworld::post" title="Posts" module="Indianic_Helloworld" sortOrder="10" action="indianic_helloworld/post" resource="Indianic_Helloworld::post" parent="Indianic_Helloworld::helloworld"/>
+
+	</menu>
+</config>

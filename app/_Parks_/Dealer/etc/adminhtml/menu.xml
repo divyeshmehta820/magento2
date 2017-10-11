@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Parks
+ *
+ * NOTICE OF LICENSE
+ *
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ *
+ * @category    Parks
+ * @package     Parks_Dealer
+ * 
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+       <add id="Parks_Dealer::dealer" title="Dealer" module="Parks_Dealer" sortOrder="51" resource="Parks_Dealer::dealer"/>
+	   <add id="Parks_Dealer::details" title="Dealer Details" module="Parks_Dealer" sortOrder="10" action="dealer/details" resource="Parks_Dealer::details" parent="Parks_Dealer::dealer"/>
+	   <add id="Parks_Dealer::dealer_configuration" title="Configuration" module="Parks_Dealer" sortOrder="99" parent="Parks_Dealer::dealer" action="adminhtml/system_config/edit/section/dealer" resource="Parks_Dealer::dealer_configuration"/>	
+    </menu>
+</config>

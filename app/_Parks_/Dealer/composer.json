@@ -1,0 +1,31 @@
+{
+    "name": "Parks\/Dealer",
+    "description": "",
+   "require": {
+        "php": "~5.5.0|~5.6.0|~7.0.0",
+        "magento/framework": "100.0.*",     
+        "Parks/module-base":"*",
+        "magento/module-catalog": "101.0.*"
+    },
+    "type": "magento2-module",
+    "version": "2.1.2",
+    "license": [
+        "Proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Parks\\Dealer\\": ""
+        }
+    },
+    "extra": {
+        "map": [
+            [
+                "*",
+                "Parks\/Dealer"
+            ]
+        ]
+    }
+}

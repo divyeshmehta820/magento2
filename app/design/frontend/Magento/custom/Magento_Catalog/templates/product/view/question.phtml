@@ -1,0 +1,84 @@
+<div>
+    <a href="#" id="click-me">Click Me</a>
+</div>
+
+<div id="popup-mpdal" style="display:none;">
+    <form onsubmit="return false;" id="questionForm" action="https://jsonplaceholder.typicode.com/posts"  method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name">
+    </div>
+    <div>
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="user_mail">
+    </div>
+    <div>
+        <label for="msg">Message:</label>
+        <textarea id="msg" name="user_message"></textarea>
+    </div>
+    <div>
+        <input type="submit" name="submit">
+    </div>
+</form>
+</div>
+
+<script>
+    require(
+        [
+            'jquery',
+            'Magento_Ui/js/modal/modal'
+        ],
+        function(
+            $,
+            modal
+        ) {
+            var options = {
+                type: 'popup',
+                responsive: true,
+                innerScroll: true,
+                title: 'Question Answer Form',
+                buttons: [{
+                    text: $.mage.__('Close'),
+                    class: '',
+                    click: function () {
+                        this.closeModal();
+                    }
+                }]
+            };
+
+            var popup = modal(options, $('#popup-mpdal'));
+
+            $("#click-me").on('click',function(){ 
+            $("#popup-mpdal").modal("openModal");
+            });
+
+
+             $("#questionForm").submit(function(){
+
+                var url = "https://jsonplaceholder.typicode.com/posts"; // the script where you handle the form input.
+
+                $.ajax({
+                type: "POST",
+                url: url,
+                showLoader: true,
+                data: $("#questionForm").serialize(), // serializes the form's elements.
+                success: function(data)
+                {
+                   $('.loading-mask').hide();
+                   
+                }
+                });
+
+                e.preventDefault(); 
+
+             });
+
+
+        }
+
+
+
+
+       
+    );
+</script>

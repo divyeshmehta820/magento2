@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+	   <referenceContainer name="content">
+            <block class="Indianic\Adminlog\Block\Adminhtml\Adminlog\Edit" name="adminlog_adminlog_edit"/>
+        </referenceContainer>
+		 <referenceContainer name="left">
+            <block class="Indianic\Adminlog\Block\Adminhtml\Adminlog\Edit\Tabs" name="adminlog_adminlog_edit_tabs">
+				<block class="Indianic\Adminlog\Block\Adminhtml\Adminlog\Edit\Tab\Adminlog" name="adminlog_adminlog_edit_tab_adminlog"/>
+				 <action method="addTab">
+                    <argument name="name" xsi:type="string">adminlog_section</argument>
+                    <argument name="block" xsi:type="string">adminlog_adminlog_edit_tab_adminlog</argument>
+                </action>
+				<!--CedAddTab-->
+			</block>
+        </referenceContainer>
+    </body>
+</page>

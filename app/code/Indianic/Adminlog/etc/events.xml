@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="backend_auth_user_login_success">
+    	<observer name="adminloginsuccess" instance="Indianic\Adminlog\Observer\Adminloginsuccess"  />
+	</event>
+	 <event name="backend_auth_user_login_failed">
+    	<observer name="adminloginfailure" instance="Indianic\Adminlog\Observer\Adminloginfailure"  />
+	</event>
+	<event name="backend_auth_user_logout_success">
+    	<observer name="adminlogoutsuccess" instance="Indianic\Adminlog\Observer\Adminlogoutsuccess"  />
+	</event>
+	<event name="sales_model_service_quote_submit_before">
+        <observer name="btn_sales_order_place_after" instance="Indianic\Adminlog\Observer\Savemessage" />
+    </event>
+	<!-- events -->
+</config>

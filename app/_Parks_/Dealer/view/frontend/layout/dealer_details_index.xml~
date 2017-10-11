@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Park Health Products
+ * Park Health Dealer Extension
+ *
+ * @category   Parks
+ * @package    Parks_Dealer
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+	  
+
+	<block class="Magento\Cms\Block\Block" name="become-a-dealer"  before="_">
+            <arguments>
+                <argument name="block_id" xsi:type="string">become-a-dealer</argument>
+            </arguments>
+	</block>
+  <referenceContainer name="content">
+	        <block class="Parks\Dealer\Block\Breadcrumbs" name="dealer_details_form" template="Parks_Dealer::dealer/add.phtml" ifconfig="dealer/dealer/enable"  />
+
+	    </referenceContainer>
+
+ <move element="become-a-dealer" destination="page.main.title" before="_" />
+  
+    </body>
+</page>

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="dealer_dealer_emailtemplate" label="Dealer Details Rejected" file="dealer_details_rejected.html" type="html" module="Parks_Dealer" area="frontend" />
+    <template id="dealer_dealer_adminemailtemplate" label="Dealer Details Admin Mail Template" file="dealer_details.html" type="html" module="Parks_Dealer" area="frontend" />
+</config>

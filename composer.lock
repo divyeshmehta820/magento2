@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "24c07b31593ed9889ef59b3551da470f",
-    "content-hash": "7c60ab766453d846d7d3c7efb3f26dea",
+    "hash": "7a9c53a3354d9c89f8e01caf2b94e4d0",
+    "content-hash": "bf36b17003416349dab77863d48a381d",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -5981,6 +5981,122 @@
             "time": "2017-02-27 21:19:07"
         },
         {
+            "name": "mageplaza/magento-2-banner-slider-extension",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-banner-slider.git",
+                "reference": "f3aacc2d20816a2b55af01d27eaad03c5ef95858"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-banner-slider/zipball/f3aacc2d20816a2b55af01d27eaad03c5ef95858",
+                "reference": "f3aacc2d20816a2b55af01d27eaad03c5ef95858",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\BetterSlider\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0",
+                "AFL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Sam",
+                    "email": "sam@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Leader"
+                }
+            ],
+            "description": "Magento 2 Banner Slider extension",
+            "time": "2017-08-17 09:26:03"
+        },
+        {
+            "name": "mageplaza/magento-2-hindi-language-pack",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-hindi-language-pack.git",
+                "reference": "f07e92ae3eaf5f055d72cf3ab8faaa7620ef62af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-hindi-language-pack/zipball/f07e92ae3eaf5f055d72cf3ab8faaa7620ef62af",
+                "reference": "f07e92ae3eaf5f055d72cf3ab8faaa7620ef62af",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.3.1|dev-master"
+            },
+            "type": "magento2-language",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza team",
+                    "email": "hi@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Leader"
+                }
+            ],
+            "description": "Hindi language package for Magento 2",
+            "homepage": "https://www.mageplaza.com",
+            "time": "2017-08-24 04:35:48"
+        },
+        {
+            "name": "mageplaza/module-core",
+            "version": "1.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/module-core.git",
+                "reference": "116f09335c272e0758bd47bd09d5d45dacb17369"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/module-core/zipball/116f09335c272e0758bd47bd09d5d45dacb17369",
+                "reference": "116f09335c272e0758bd47bd09d5d45dacb17369",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Core\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "hi@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Leader"
+                }
+            ],
+            "description": "Mageplaza Core for Magento 2",
+            "time": "2017-10-03 03:47:22"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.16.0",
             "source": {
@@ -9769,6 +9885,7 @@
     "minimum-stability": "alpha",
     "stability-flags": {
         "composer/composer": 15,
+        "mageplaza/magento-2-hindi-language-pack": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": true,

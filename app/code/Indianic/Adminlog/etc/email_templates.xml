@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+ 
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:Magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="adminlog_login_success" label="success email" file="adminlog/loginsuccessfull.html" type="html" module="Indianic_Adminlog" area="adminhtml"/>
+</config>

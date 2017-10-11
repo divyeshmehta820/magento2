@@ -1,0 +1,58 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/** @var $block \Magento\Checkout\Block\Cart */
+?>
+<form onsubmit="return false" id="messageForm" action="<?php echo $block->getUrl('adminlog/cart/messagePost') ?>" method="post">
+    	<input placeholder="Any Message" value="<?php echo $this->getQuote()->getMessage(); ?>" type="text" name="message" id="message">
+    	<input type="submit" class="action primary checkout"  name="submit">
+</form>
+
+<?php if (!$block->hasError()): ?>
+<?php $methods = $block->getMethods('methods') ?: $block->getMethods('top_methods') ?>
+<ul class="checkout methods items checkout-methods-items">
+<?php foreach ($methods as $method): ?>
+    <?php if ($methodHtml = $block->getMethodHtml($method)): ?>
+    <li class="item"><?php /* @escapeNotVerified */ echo $methodHtml; ?></li>
+    <?php endif; ?>
+<?php endforeach; ?>
+</ul>
+<?php endif; ?>
+
+<script type="text/javascript">
+require(['jquery'],function($){
+    $(window).load(function() {
+		var frm = $('#messageForm');
+
+		frm.submit(function (e) {
+
+		e.preventDefault();
+
+		$.ajax({
+		showLoader: true,
+		type: frm.attr('method'),
+		url: frm.attr('action'),
+		data: frm.serialize(),
+		dataType:"json",
+		success: function (data) {
+			
+		},
+		error: function (data) {
+		console.log('An error occurred.');
+		console.log(data);
+		},
+		});
+		});
+
+    });
+});
+</script>
+
+
